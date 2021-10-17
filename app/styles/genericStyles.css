@@ -1,0 +1,20 @@
+/* * * * * * * * * * * * * * * 
+* Project      : sanjustin.xyz
+* Date Created : 17/10/2021
+* Contributor  : SanJeosutin
+ * * * * * * * * * * * * * * */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Roboto+Slab&display=swap');
+
+/*
+! Heading Font: 'IBM Plex Mono', monospace;
+! Body Font: 'Roboto Slab', serif;
+*/
+
+h1{
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.lead{
+    font-family: 'Roboto Slab', serif;
+}
