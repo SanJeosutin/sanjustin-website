@@ -1,24 +1,16 @@
-/* * * * * * * * * * * * * * * 
-* Project      : sanjustin.xyz
-* Date Created : 17/10/2021
-* Contributor  : SanJeosutin
- * * * * * * * * * * * * * * */
-
 $(document).ready(function(){
-    $('#toggleDarkMode').click(function(){
-        $(this).data('clicked', true);
-        $("i", this).toggleClass("fas fa-moon fas fa-sun");
-        
-        //? something todo with toggling checkbox via buton 
-        var $$ = $(this)
-        if( !$$.is('.checked')){
-            $$.addClass('checked');
-            $('#imgCheck').prop('checked', true);
-        } else {
-            $$.removeClass('checked');
-            $('#imgCheck').prop('checked', false);
-        }
+    $('.animate').t();
+    $('.animate').find('.t-caret').css({opacity:0});
+
+    $('#github').click(function(){
+        window.open("https://github.com/SanJeosutin");
     });
 
-    $('.lead').t();
+    $('#linkedIn').click(function(){
+        window.open("https://www.linkedin.com/in/justinsan/");
+    });
+
+    $('#email').click(function(){
+        window.open("mailto:contact.sanjustin@gmail.com");
+    });
 });
