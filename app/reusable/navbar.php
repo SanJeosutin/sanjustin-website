@@ -1,4 +1,3 @@
-<!--Navbar START-->
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <a class="navbar-brand" href="index.php">San Justin</a>
     <!--Burger Menu START-->
@@ -9,20 +8,27 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navDropMenuProjects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Projects
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div class="dropdown-menu" aria-labelledby="navDropMenuProjects">
                     <a class="dropdown-item" href="#">Past Projects</a>
                     <a class="dropdown-item" href="#">Current Projects</a>
                     <a class="dropdown-item" href="#">Unfinished Projects</a>
                 </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="about.php">About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navDropMenuDesigns" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Galery
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navDropMenuDesigns">
+                    <a class="dropdown-item" href="#">Photography</a>
+                    <a class="dropdown-item" href="#">Designs</a>
+                    <a class="dropdown-item" href="#">Something Cool</a>
+                </div>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
