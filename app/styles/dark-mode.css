@@ -28,6 +28,19 @@
 [data-theme="dark"] .navbar-brand{
   color: #eee !important;
 }
+
 [data-theme="dark"] .nav-link{
   color: #eee !important;
+}
+
+[data-theme="dark"] .card-header{
+  background-color: #292929 !important;
+}
+
+[data-theme="dark"] .card-body{
+  background-color: #1a1a1a !important;
+}
+
+[data-theme="dark"] .card-footer{
+  background-color: #292929 !important;
 }
