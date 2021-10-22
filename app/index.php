@@ -1,17 +1,19 @@
 <?php
 include("reusable/header.php");
 include("reusable/navbar.php");
+
+include_once("classes/components/card.php");
 ?>
 <!--Main Content START-->
-<p class="lead animate">
-    Welcome to my new website!. You can find <kbd>anything</kbd> all the
-    stuff I did during my uni year in here, well... maybe not <em>all</em> but most stuff I think it's cool
-    / intresting enough that I've been working on. 'nywho enjoy the snoop :D!
-</p>
-<br>
-<p class="lead">
+<div class="@animate">
+    <p class="lead">
+        Hey, hey! So.. uh.. new website, yea.. uhh mainly I'll be putting my projects that
+        I've been working on during my spare time and some other stuff as well that most likely
+        unrelated to programming. So... happy browsing!
+    </p>
+    <br>
     <h5>Current Project:</h5>
-</p>
+</div>
 <!--Main Content END-->
 <?php
 include("reusable/footer.php");
