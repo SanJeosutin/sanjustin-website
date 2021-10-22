@@ -11,7 +11,7 @@
 <script src="scripts/genericFunctions.js"></script>
 <footer></footer>
 <!--Footer START-->
-<footer class="page-footer font-small pt-4 fixed-bottom">
+<footer class="page-footer font-small pt-4 fixed-bottom bg-light">
     <div class="container-fluid text-center text-md-left">
         <div class="text-center py-3">
         <button type="button" id="github" class="btn btn-secondary"><i class="fab fa-github"></i> My Github</button>
