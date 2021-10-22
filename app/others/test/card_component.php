@@ -1,7 +1,7 @@
 <?php
-    include("reusable/header.php"); 
-    include("reusable/navbar.php");
-    include_once("classes/components/card.php");
+    include("../../reusable/header.php"); 
+    include("../../reusable/navbar.php");
+    include_once("../../classes/components/card.php");
 
     echo "<h4>Card Component Test</h4>";
 
@@ -19,5 +19,5 @@
     Card::create("Test @", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci labore id voluptatum, nostrum suscipit natus dolores illo eveniet possimus, inventore consequatur cupiditate error iste accusamus voluptate sapiente magni, libero voluptates.", "google.com", "github.com");
     Card::display();
 
-    include("reusable/footer.php");
+    include("../../reusable/footer.php");
 ?>
