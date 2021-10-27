@@ -2,6 +2,8 @@ $(document).ready(function(){
     $('.animate').t();
     $('.animate').find('.t-caret').css({opacity:0});
 
+    $('#gallery').fluidbox();
+
     $('#github').click(function(){
         window.open("https://github.com/SanJeosutin");
     });
