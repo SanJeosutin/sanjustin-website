@@ -12,9 +12,9 @@
                     Projects
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navDropMenuProjects">
-                    <a class="dropdown-item" href="#">Past Projects</a>
-                    <a class="dropdown-item" href="#">Current Projects</a>
-                    <a class="dropdown-item" href="#">Unfinished Projects</a>
+                    <a class="dropdown-item" href="project.php?renderPage=pastProject">Past Projects</a>
+                    <a class="dropdown-item" href="project.php?renderPage=currentProject">Current Projects</a>
+                    <a class="dropdown-item" href="project.php?renderPage=unfinisedProject">Unfinished Projects</a>
                 </div>
             </li>
             <li class="nav-item active">
@@ -22,12 +22,14 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navDropMenuDesigns" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Galery
+                    Galleries
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navDropMenuDesigns">
-                    <a class="dropdown-item" href="#">Photography</a>
-                    <a class="dropdown-item" href="#">Designs</a>
-                    <a class="dropdown-item" href="#">Something Cool</a>
+                    <form action="gallery.php" method="POST">
+                        <a class="dropdown-item" href="gallery.php?renderPage=photography" name="photography">Photography</a>
+                        <a class="dropdown-item" href="gallery.php?renderPage=designs" name="designs">Designs</a>
+                        <a class="dropdown-item" href="gallery.php?renderPage=coolStuff" name="coolStuff">Something Cool</a>
+                    </form>
                 </div>
             </li>
         </ul>
