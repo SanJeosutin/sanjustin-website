@@ -25,11 +25,9 @@
                     Galleries
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navDropMenuDesigns">
-                    <form action="gallery.php" method="POST">
-                        <a class="dropdown-item" href="gallery.php?RenderPage=photography">Photography</a>
-                        <a class="dropdown-item" href="gallery.php?RenderPage=designs">Designs</a>
-                        <a class="dropdown-item" href="gallery.php?RenderPage=coolStuff">Something Cool</a>
-                    </form>
+                    <a class="dropdown-item" href="gallery.php?RenderPage=photography">Photography</a>
+                    <a class="dropdown-item" href="gallery.php?RenderPage=designs">Designs</a>
+                    <a class="dropdown-item" href="gallery.php?RenderPage=coolStuff">Something Cool</a>
                 </div>
             </li>
         </ul>
