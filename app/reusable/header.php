@@ -1,36 +1,35 @@
 <?php
+
 $curentLocation = basename($_SERVER['PHP_SELF']);
 $curentLocation = str_replace('.php', '', $curentLocation);
 $curentLocation = ucfirst($curentLocation);
 
 if ($curentLocation == "Index") $curentLocation = "Home";
 
-if (isset($_GET['renderPage'])) {
-    switch ($_GET['renderPage']) {
-        case 'photography':
-            $curentLocation = "Photography";
-            break;
+switch (isset($_GET['RenderPage'])) {
+    case 'photography':
+        $curentLocation = "Photography";
+        break;
 
-        case 'coolStuff':
-            $curentLocation = "Cool Stuff";
-            break;
+    case 'coolStuff':
+        $curentLocation = "Cool Stuff";
+        break;
 
-        case 'designs':
-            $curentLocation = "Designs";
-            break;
+    case 'designs':
+        $curentLocation = "Designs";
+        break;
 
-        case 'pastProject':
-            $curentLocation = "Past Project";
-            break;
+    case 'pastProject':
+        $curentLocation = "Past Project";
+        break;
 
-        case 'currentProject':
-            $curentLocation = "Current Project";
-            break;
-
-        case 'unfinisedProject':
-            $curentLocation = "Unfinised Project";
-            break;
-    }
+    case 'currentProject':
+        $curentLocation = "Current Project";
+        break;
+        
+    case 'unfinisedProject':
+        $curentLocation = "Unfinised Project";
+        break;
 }
 ?>
 

@@ -12,9 +12,9 @@
                     Projects
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navDropMenuProjects">
-                    <a class="dropdown-item" href="project.php?renderPage=pastProject">Past Projects</a>
-                    <a class="dropdown-item" href="project.php?renderPage=currentProject">Current Projects</a>
-                    <a class="dropdown-item" href="project.php?renderPage=unfinisedProject">Unfinished Projects</a>
+                    <a class="dropdown-item" href="project.php?RenderPage=pastProject">Past Projects</a>
+                    <a class="dropdown-item" href="project.php?RenderPage=currentProject">Current Projects</a>
+                    <a class="dropdown-item" href="project.php?RenderPage=unfinisedProject">Unfinished Projects</a>
                 </div>
             </li>
             <li class="nav-item active">
@@ -26,9 +26,9 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navDropMenuDesigns">
                     <form action="gallery.php" method="POST">
-                        <a class="dropdown-item" href="gallery.php?renderPage=photography" name="photography">Photography</a>
-                        <a class="dropdown-item" href="gallery.php?renderPage=designs" name="designs">Designs</a>
-                        <a class="dropdown-item" href="gallery.php?renderPage=coolStuff" name="coolStuff">Something Cool</a>
+                        <a class="dropdown-item" href="gallery.php?RenderPage=photography">Photography</a>
+                        <a class="dropdown-item" href="gallery.php?RenderPage=designs">Designs</a>
+                        <a class="dropdown-item" href="gallery.php?RenderPage=coolStuff">Something Cool</a>
                     </form>
                 </div>
             </li>

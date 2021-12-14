@@ -14,13 +14,20 @@
         static function display(){
             echo "<div class=\"row\">";
             for($i = 0; $i < sizeof(self::$details); $i+=5){
+                //echo "
+                //<!--galery START -->
+                //    <a href=\"".self::$details[$i+2]."\" title=\"".self::$details[$i]."\" id=\"gallery\">
+                //        <img src=\"".self::$details[$i+2]."\" alt=\"".self::$details[$i+4]."\" title=\"".self::$details[$i]."\" />
+                //    </a>
+                //<!--galery END--> 
                 echo "
-                <!--galery START -->
-                    <a href=\"".self::$details[$i+2]."\" title=\"".self::$details[$i]."\" id=\"gallery\">
-                        <img src=\"".self::$details[$i+2]."\" alt=\"".self::$details[$i+4]."\" title=\"".self::$details[$i]."\" />
-                    </a>
-                <!--galery END--> 
-            ";
+                Title:".self::$details[$i]."<br>".
+                "Description:".self::$details[$i+1]."<br>".
+                "Path:".self::$details[$i+2]."<br>".
+                "Type:".self::$details[$i+3]."<br>"."
+                alt:".self::$details[$i+4]."<br>"."
+                Date:".self::$details[$i+5]."<br>
+                ";
             }
             echo "</div>";
         }
