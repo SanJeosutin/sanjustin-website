@@ -12,7 +12,10 @@ include_once("classes/components/card.php");
         unrelated to programming. So... happy browsing!
     </p>
     <br>
-    <h5>Current Project:</h5>
+    <h5>Latest Stuff:</h5>
+
+    
+
 </div>
 <!--Main Content END-->
 <?php
