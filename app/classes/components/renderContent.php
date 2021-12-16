@@ -3,8 +3,6 @@
 include("image.php");
 include("classes/instagramAPI.class.php");
 
-
-
 class Content{
     static function render($contentType, $description){
         $ig = new Instagram();
@@ -28,6 +26,7 @@ class Content{
                 Image::create($caption, $res->media_url, $type, $res->timestamp, $res->permalink);
             }
         }
+        
         Image::display();
     }
 }
