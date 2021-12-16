@@ -2,58 +2,48 @@
 include("reusable/header.php");
 include("reusable/navbar.php");
 
-switch (isset($_GET['RenderPage'])) {
-    case 'photography':
-?>
-        <!--Main Content START-->
-        <div>
-            <p class="lead">
-                In here you can find some photos I took, ranging from new ones to old ones. Enjoy!
-            </p>
-            <br>
-        </div>
-        <!--Main Content END-->
-<?php
-        break;
+include("classes/components/renderContent.php");
+include("classes/components/image.php");
+include ("classes/instagramAPI.class.php");
 
-    case 'coolStuff':
-?>
-        <!--Main Content START-->
-        <div>
-            <p class="lead">
-                In here you can find some cool stuff I did, ranging from new ones to old ones. Enjoy!
-            </p>
-            <br>
-        </div>
-        <!--Main Content END-->
-<?php
-        break;
+$ig = new Instagram();
 
-    case 'designs':
-?>
-        <!--Main Content START-->
-        <div>
-            <p class="lead">
-                In here you can find some designs I've done, ranging from new ones to old ones. Enjoy!
-            </p>
-            <br>
-        </div>
-        <!--Main Content END-->
-<?php
-        break;
-        
-    default:
-?>
-        <!--Main Content START-->
-        <div>
-            <p class="lead">
-                Ah well well.. you've found a secret ;D. Good on ya.
-            </p>
-            <br>
-        </div>
-        <!--Main Content END-->
-<?php
-        break;
+//!was here pls fix ;P
+
+$result = $ig->getUserPost();
+if (isset($_GET['RenderPage'])) {
+    foreach($result as $res){
+        $caption = substr($res->caption, 0, strpos($res->caption, "#"));
+        $type = substr($res->caption, strpos($res->caption, '#') + 1);
+
+        Image::create($caption, $res->media_url, $type, $res->timestamp, $res->permalink);
+
+        //switch ($_GET['RenderPage']) {
+        switch ($type) {
+            case 'photography':
+                Content::renderGalery("In here you can find some photos I took, ranging from new ones to old ones. Enjoy!", "");
+                Image::display();
+
+                break;
+
+            case 'coolstuff':
+                Content::renderGalery("In here you can find some cool stuff I did, ranging from new ones to old ones. Enjoy!", "");
+                Image::display();
+
+                break;
+
+            case 'designs':
+                Content::renderGalery("In here you can find some designs I've done, ranging from new ones to old ones. Enjoy!", "");
+                Image::display();
+
+                break;
+
+            default:
+                Content::renderGalery("Ah well well.. you've found a secret ;D. Good on ya.", "");
+                break;
+        }
+    }
+
 }
 
 include("reusable/footer.php");

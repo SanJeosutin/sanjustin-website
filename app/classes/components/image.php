@@ -2,33 +2,43 @@
     class Image{
         private static $details = array();
 
-        static function create($title, $description, $imagePath, $type, $alt, $dateCreated){
-            array_push(self::$details, $title);
-            array_push(self::$details, $description);
-            array_push(self::$details, $imagePath);
+        static function create($caption, $imageURL, $type, $dateCreated, $permaURL){
+            array_push(self::$details, $caption);
+            array_push(self::$details, $imageURL);
             array_push(self::$details, $type);
-            array_push(self::$details, $alt);
             array_push(self::$details, $dateCreated);
+            array_push(self::$details, $permaURL);
         }
 
         static function display(){
             echo "<div class=\"row\">";
             for($i = 0; $i < sizeof(self::$details); $i+=5){
-                //echo "
-                //<!--galery START -->
-                //    <a href=\"".self::$details[$i+2]."\" title=\"".self::$details[$i]."\" id=\"gallery\">
-                //        <img src=\"".self::$details[$i+2]."\" alt=\"".self::$details[$i+4]."\" title=\"".self::$details[$i]."\" />
-                //    </a>
-                //<!--galery END--> 
                 echo "
-                Title:".self::$details[$i]."<br>".
-                "Description:".self::$details[$i+1]."<br>".
-                "Path:".self::$details[$i+2]."<br>".
-                "Type:".self::$details[$i+3]."<br>"."
-                alt:".self::$details[$i+4]."<br>"."
-                Date:".self::$details[$i+5]."<br>
+                <!--galery START-->
+                    <div class=\"col-sm-4 py-2\">
+                        <div class=\"card h-100\" style=\"width: 18rem;\">
+                            <a href=\"".self::$details[$i+4]."\" target=\"_blank\">
+                                <img src=\"".self::$details[$i+1]."\" class=\"card-img-top\" alt=\"".self::$details[$i]."\">
+                            </a>
+                            <h5 class=\"card-header\">".self::$details[$i]."</h5>
+                            <div class=\"card-body\">
+                                <p class=\"card-text\">Posted on ".date( "d M  Y", strtotime(self::$details[$i+3]))."</p>
+                            </div>
+                        </div>
+                    </div>
+                <!--galery END--> 
                 ";
+                /*
+                echo "
+                Caption:".self::$details[$i]."<br>".
+                "Path:".self::$details[$i+1]."<br>".
+                "Type:".self::$details[$i+2]."<br>"."
+                Date:".self::$details[$i+3]."<br>"."
+                PermaURL:".self::$details[$i+4]."<br>"."
+                ";
+                */
             }
             echo "</div>";
         }
     }
+?>
