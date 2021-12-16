@@ -1,21 +1,10 @@
 <?php
+require_once("../config/keys.php");
+
 class Instagram{
 
     const API_URL = "https://graph.instagram.com/";
-
-
-    //!MOVE ACCESS TOKEN TO CONFIG FILE
-    //!MOVE ACCESS TOKEN TO CONFIG FILE
-    //!MOVE ACCESS TOKEN TO CONFIG FILE
-
-    private const ACCESS_TOKEN = "";
-
-    //!MOVE ACCESS TOKEN TO CONFIG FILE
-    //!MOVE ACCESS TOKEN TO CONFIG FILE
-    //!MOVE ACCESS TOKEN TO CONFIG FILE
-    //!MOVE ACCESS TOKEN TO CONFIG FILE
-
-    const API_URL_ACCESS_TOKEN = "&access_token=".self::ACCESS_TOKEN;
+    const API_URL_ACCESS_TOKEN = "&access_token=".ACCESS_TOKEN;
 
 
     private function makeRequest($url){
