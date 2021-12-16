@@ -27,7 +27,7 @@
                 <div class="dropdown-menu" aria-labelledby="navDropMenuDesigns">
                     <a class="dropdown-item" href="gallery.php?RenderPage=photography">Photography</a>
                     <a class="dropdown-item" href="gallery.php?RenderPage=designs">Designs</a>
-                    <a class="dropdown-item" href="gallery.php?RenderPage=coolStuff">Something Cool</a>
+                    <a class="dropdown-item" href="gallery.php?RenderPage=coolstuff">Something Cool</a>
                 </div>
             </li>
         </ul>

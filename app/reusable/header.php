@@ -12,7 +12,7 @@ if (isset($_GET['RenderPage'])) {
             $curentLocation = "Photography";
             break;
 
-        case 'coolStuff':
+        case 'coolstuff':
             $curentLocation = "Cool Stuff";
             break;
 

@@ -16,12 +16,13 @@
 <footer class="page-footer font-small pt-4 fixed-bottom bg-light">
     <div class="container-fluid text-center text-md-left">
         <div class="text-center py-3">
-        <button type="button" id="github" class="btn btn-secondary"><i class="fab fa-github"></i> My Github</button>
+        <button type="button" id="github" class="btn btn-secondary"><i class="fab fa-github"></i> Github</button>
         <button type="button" id="linkedIn" class="btn btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</button>
         <button type="button" id="email" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Me</button>
+        <button type="button" id="instagram" class="btn btn-secondary"><i class="fab fa-instagram"></i> Instagram</button>
         </div>
         <div class="footer-copyright text-center py-3">
-        sanjustin &copy; <?php echo date('Y') ?>
+        San Justin &copy; <?php echo date('Y') ?>
         </div>
     </div>
 </footer>
