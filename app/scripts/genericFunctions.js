@@ -15,4 +15,8 @@ $(document).ready(function(){
     $('#email').click(function(){
         window.open("mailto:contact.sanjustin@gmail.com");
     });
+
+    $('#instagram').click(function(){
+        window.open("https://www.instagram.com/sanjeosutin/");
+    });
 });
