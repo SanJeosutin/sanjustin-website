@@ -12,9 +12,9 @@
                     Projects
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navDropMenuProjects">
-                    <a class="dropdown-item" href="project.php?RenderPage=pastProject">Past Projects</a>
-                    <a class="dropdown-item" href="project.php?RenderPage=currentProject">Current Projects</a>
-                    <a class="dropdown-item" href="project.php?RenderPage=unfinisedProject">Unfinished Projects</a>
+                    <a class="dropdown-item" href="project.php?RenderPage=pastproject">Past Projects</a>
+                    <a class="dropdown-item" href="project.php?RenderPage=currentproject">Current Projects</a>
+                    <a class="dropdown-item" href="project.php?RenderPage=unfinishedproject">Unfinished Projects</a>
                 </div>
             </li>
             <li class="nav-item active">

@@ -20,15 +20,15 @@ if (isset($_GET['RenderPage'])) {
             $curentLocation = "Designs";
             break;
 
-        case 'pastProject':
+        case 'pastproject':
             $curentLocation = "Past Project";
             break;
 
-        case 'currentProject':
+        case 'currentproject':
             $curentLocation = "Current Project";
             break;
 
-        case 'unfinisedProject':
+        case 'unfinisedproject':
             $curentLocation = "Unfinised Project";
             break;
     }
