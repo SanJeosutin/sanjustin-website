@@ -1,38 +1,18 @@
 <?php
 class DataReader{
-    static function readRawData($source){
+    static private function readRawData($source){
         $rawData = fopen($source, "r") or die ("Unable to open file!");
-        
-        
-        
-        echo fread($rawData,filesize($source));
+        fread($rawData,filesize($source));
         fclose($rawData);
     }
 
     static function format($symbol){
-        switch ($symbol) {
-            case '#':
-                # code...
-                break;
-            case '"':
-                # code...
-                break;
-
-            case '{':
-                # code...
-                break;
-
-            case '[':
-                # code...
-                break;
-
-            case '//':
-                # code...
-                break;
-
-            default:
-                # code...
-                break;
+        $rawData = self::readRawData("../data/2022 Goal.txt");
+        foreach ($rawData as $data) {
+            if(preg_match("/{$symbol}/", $data)){
+                $data = str_replace("{$symbol}", "", $data);
+                echo $data;
+            }
         }
     }
 }

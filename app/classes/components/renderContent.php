@@ -78,7 +78,7 @@ class Content{
             
             case "AMBITIONS":
                 $dr = new DataReader();
-                echo $dr->readRawData("../data/2022 Goal.txt");
+                //echo $dr->readRawData("../data/2022 Goal.txt");
                 break;
 
             case 'GALLERIES':
