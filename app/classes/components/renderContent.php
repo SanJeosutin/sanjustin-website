@@ -2,6 +2,7 @@
 
 include("card.php");
 include("image.php");
+include("classes/dataReader.class.php");
 include("classes/githubAPI.class.php");
 include("classes/instagramAPI.class.php");
 
@@ -76,7 +77,8 @@ class Content{
                 break;
             
             case "AMBITIONS":
-                
+                $dr = new DataReader();
+                echo $dr->readRawData("../data/2022 Goal.txt");
                 break;
 
             case 'GALLERIES':
