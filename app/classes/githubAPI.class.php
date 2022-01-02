@@ -12,5 +12,12 @@ class Github{
 
         return API::makeRequest($url, $header, "HTTP_HEADER");
     }
+
+    function getUserInfo(){
+        $header = "Authorization: token ".CLIENT_TOKEN;
+        $url = self::API_URL."users/SanJeosutin";
+
+        return API::makeRequest($url, $header, "HTTP_HEADER");
+    }
 }
 ?>
