@@ -51,6 +51,6 @@ if (isset($_GET['RenderPage'])) {
 
 <body class="bg-light">
     <!--Jumbotron START-->
-    <div class="jumbotron jumbotron-fluid bg-light">
+    <div class="jumbotron jumbotron-fluid bg-light" style="padding-bottom: 17%;">
         <div class="container">
             <h1 class="display-4 animate"><?php echo $curentLocation ?></h1>
