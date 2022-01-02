@@ -16,13 +16,13 @@
                 echo "
                 <!--galery START-->
                     <div class=\"col-sm-4 py-2\">
-                        <div class=\"card h-100\" style=\"width: 18rem;\">
+                        <div class=\"card h-100 picture-gallery\" style=\"width: 18rem;\">
                             <a href=\"".self::$details[$i+4]."\" target=\"_blank\">
                                 <img src=\"".self::$details[$i+1]."\" class=\"card-img-top\" alt=\"".self::$details[$i]."\">
                             </a>
-                            <h5 class=\"card-header\">".self::$details[$i]."</h5>
-                            <div class=\"card-body\">
-                                <p class=\"card-text\">Posted on ".date( "d M  Y", strtotime(self::$details[$i+3]))."</p>
+                            <div style=\"width: 96%;\">
+                                <h5 class=\"card-header text-center bg-light\">".self::$details[$i]."</h5>
+                                <p class=\"card-text text-center bg-light\">Posted on ".date( "d M  Y", strtotime(self::$details[$i+3]))."</p>
                             </div>
                         </div>
                     </div>
