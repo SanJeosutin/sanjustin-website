@@ -35,25 +35,6 @@ class Content{
 
         switch ($arg_0) {
             case 'HOME':
-                
-                break;
-
-            case 'PROJECTS':
-
-                $git = new Github();
-                $result = $git->getUserRepo();
-                
-                foreach($result as $res){
-                    if(strpos($res->description, "{$contentType}")){
-                        $res->description = str_replace('{'.$contentType.'}', "", $res->description);
-                        Card::create($res->name, $res->description, $res->html_url, $res->html_url);
-                    }
-                }
-
-                Card::display();
-                break;
-            
-            case "ABOUT":
                 $git = new Github();
                 $res = $git->getUserInfo();
                     echo "
@@ -77,6 +58,25 @@ class Content{
                         </div>
                     <!--Main Content END-->
                     ";
+                break;
+
+            case 'PROJECTS':
+
+                $git = new Github();
+                $result = $git->getUserRepo();
+                
+                foreach($result as $res){
+                    if(strpos($res->description, "{$contentType}")){
+                        $res->description = str_replace('{'.$contentType.'}', "", $res->description);
+                        Card::create($res->name, $res->description, $res->html_url, $res->html_url);
+                    }
+                }
+
+                Card::display();
+                break;
+            
+            case "AMBITIONS":
+                
                 break;
 
             case 'GALLERIES':

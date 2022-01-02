@@ -5,6 +5,7 @@ $curentLocation = str_replace('.php', '', $curentLocation);
 $curentLocation = ucfirst($curentLocation);
 
 if ($curentLocation == "Index") $curentLocation = "Home";
+if ($curentLocation == "Ambition") $curentLocation = "Yearly Goal";
 
 if (isset($_GET['RenderPage'])) {
     switch ($_GET['RenderPage']) {

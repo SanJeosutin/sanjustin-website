@@ -4,7 +4,7 @@ include("reusable/navbar.php");
 
 include("classes/components/renderContent.php");
 
-Content::render("ABOUT");
+Content::render("AMBITIONS");
 
 include("reusable/footer.php");
 ?>
