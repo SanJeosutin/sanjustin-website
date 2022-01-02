@@ -24,8 +24,8 @@
                     <div class=\"card-body\">
                         <p class=\"card-text\">".self::$details[$i+1]."</p>
 
-                        <a href=\"".self::$details[$i+2]."\" class=\"btn btn-primary btn-sm float-right\">Live Demo</a>
-                        <a href=\"".self::$details[$i+3]."\" class=\"btn btn-secondary btn-sm float-right\" style=\"margin-right: 5px\"><i class=\"fab fa-github\"></i> Source Code</a>
+                        <a href=\"".self::$details[$i+2]."\" class=\"btn btn-primary btn-sm float-right disabled\" >Live Demo</a>
+                        <a href=\"".self::$details[$i+3]."\" class=\"btn btn-secondary btn-sm float-right\" style=\"margin-right: 5px\"><i class=\"fab fa-github\" ></i> Source Code</a>
                     </div>
                         
                 </div>
