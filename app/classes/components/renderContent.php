@@ -34,6 +34,10 @@ class Content{
         }
 
         switch ($arg_0) {
+            case 'HOME':
+                
+                break;
+
             case 'PROJECTS':
 
                 $git = new Github();
@@ -48,23 +52,8 @@ class Content{
 
                 Card::display();
                 break;
-
-            case 'GALLERIES':
-                $ig = new Instagram();
-                $result = $ig->getUserPost();
-                
-                foreach($result as $res){
-                    $caption = substr($res->caption, 0, strpos($res->caption, "#"));
-                    $type = substr($res->caption, strpos($res->caption, '#') + 1);
-                    if($type == $contentType){
-                        Image::create($caption, $res->media_url, $type, $res->timestamp, $res->permalink);
-                    }
-                }
-                
-                Image::display();
-                break;
-
-            case 'ABOUT':
+            
+            case "ABOUT":
                 $git = new Github();
                 $res = $git->getUserInfo();
                     echo "
@@ -88,6 +77,21 @@ class Content{
                         </div>
                     <!--Main Content END-->
                     ";
+                break;
+
+            case 'GALLERIES':
+                $ig = new Instagram();
+                $result = $ig->getUserPost();
+                
+                foreach($result as $res){
+                    $caption = substr($res->caption, 0, strpos($res->caption, "#"));
+                    $type = substr($res->caption, strpos($res->caption, '#') + 1);
+                    if($type == $contentType){
+                        Image::create($caption, $res->media_url, $type, $res->timestamp, $res->permalink);
+                    }
+                }
+                
+                Image::display();
                 break;
         }
 
