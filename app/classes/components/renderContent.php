@@ -81,8 +81,8 @@ class Content{
                                 &nbsp;&nbsp;&nbsp;&nbsp;I created this website to showcase my work that I've been doing during my time at uni. 
                                 I have passion for web development, photography, musics, games and currently studying $res->bio at $res->company.
                                 Belive it or not I almost finished my degree with only one year left to go! Currently I'm working on a e-commerce website that 
-                                uses the Laravel framework. I'm based in Australia and I'm currently living in $res->location. You can reach me either via 
-                                <a href=\"mailto:$res->email\"> email </a> or on my social media accounts. Thank you for visiting my website!
+                                uses the Laravel framework. I'm currently based in $res->location. You can reach me either via 
+                                <a href=\"mailto:$res->email\"> email </a> or on my social media accounts. Thank you for checking my stuff out!
                                 </p>
                             </div>
                         </div>
