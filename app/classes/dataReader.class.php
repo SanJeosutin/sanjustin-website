@@ -18,15 +18,6 @@ class DataReader{
                         $prevLine = $rawdata[$i-1];
                     }
                     $currLine = $line;
-                    
-                    /*
-                    //?delete when done
-                    echo "PREV: ".$prevLine."<br>";
-                    echo "CURR: ".$currLine."<br>";
-                    echo "<br><br>";
-                    var_dump($rawdata);
-                    //?delete when done
-                    */
 
                     if(strpos($prevLine, "#TITLE") !== false){
                         echo "<p class=\"lead\">$currLine</p>";
@@ -48,16 +39,15 @@ class DataReader{
                                 ";
                             }
                         }
-                    }
-                                            
-                    echo "
+                        echo "
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                    ";
+                        ";
+                    }
 
                     if (strpos($currLine, "[") !== false) {
+                        echo"<tr>";
                         $currLine = str_replace("[", "", $currLine);
                         $currLine = str_replace("]", "", $currLine);
                         $wordInLine = explode(",", $currLine);
@@ -70,8 +60,14 @@ class DataReader{
 
                         echo"
                                         </tr>
-                                    </tbody>
-                                </table>
+
+                        ";
+                    }
+
+                    if(strpos($currLine, "#END") !== false){
+                        echo "
+                        </tbody>
+                                    </table>
                         ";
                     }
                     $i++;
