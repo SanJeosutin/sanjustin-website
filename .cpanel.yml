@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/sanjqgbl/
-    - /bin/cp -R app $DEPLOYPATH/public_html
+    - /bin/cp -R app/. $DEPLOYPATH/public_html
     - /bin/cp -R data $DEPLOYPATH
