@@ -1,0 +1,5 @@
+#TITLE
+Hi there 👋, I'm Justin (or known as SanJeosutin).
+
+#DESCRIPTION
+I created this website to showcase my work that I've been doing during my time at uni. I have passion for web development, photography, musics, games and currently studying Bachelor of Computer Science at Swinburne University of Technology. Belive it or not I almost finished my degree with only one year left to go! Currently I'm working on a e-commerce website that uses the Laravel framework. I'm currently based in Melbourne, Australia. You can reach me either via email or on my social media accounts. Thank you for checking my stuff out!
