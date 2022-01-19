@@ -17,7 +17,6 @@ class Content{
     static function render(){
         extract(func_get_args(), EXTR_PREFIX_ALL, "arg");
 
-
         if(isset($arg_1)){
             $contentType = $arg_1[0];
             $description = $arg_1[1];
@@ -34,31 +33,26 @@ class Content{
             ";
         }
 
+        $dr = new DataReader();
+
         switch ($arg_0) {
             case 'HOME':
                 $git = new Github();
                 $res = $git->getUserInfo();
-                    echo "
-                    <!--Main Content START-->
-                        <div class=\"row\">
-                            <div class=\"col-md-4\">
-                                <img src=\"$res->avatar_url\" class=\"img-thumbnail rounded mx-auto d-block\" alt=\"$res->login\">
-                            </div>
-                            <div class=\"col-md-8\">
-                                <p class=\"lead\">
-                                    Hi there 👋, I'm Justin (or known as $res->login). 
-                                </p>
-                                <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;I created this website to showcase my work that I've been doing during my time at uni. 
-                                I have passion for web development, photography, musics, games and currently studying $res->bio at $res->company.
-                                Belive it or not I almost finished my degree with only one year left to go! Currently I'm working on a e-commerce website that 
-                                uses the Laravel framework. I'm currently based in $res->location. You can reach me either via 
-                                <a href=\"mailto:$res->email\"> email </a> or on my social media accounts. Thank you for checking my stuff out!
-                                </p>
-                            </div>
+                echo "
+                <!--Main Content START-->
+                    <div class=\"row\">
+                        <div class=\"col-md-4\">
+                            <img src=\"$res->avatar_url\" class=\"img-thumbnail rounded mx-auto d-block\" alt=\"$res->login\">
                         </div>
-                    <!--Main Content END-->
-                    ";
+                        <div class=\"col-md-8\">
+                        ";
+                echo $dr->readRawData("../data/Bio.txt")
+                        ."
+                        </div>
+                    </div>
+                <!--Main Content END-->
+                ";
                 break;
 
             case 'PROJECTS':
@@ -76,7 +70,6 @@ class Content{
                 break;
             
             case "AMBITIONS":
-                $dr = new DataReader();
                 echo $dr->readRawData("../data/2022 Goal.txt");
                 break;
 
