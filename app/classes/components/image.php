@@ -11,18 +11,18 @@
         }
 
         static function display(){
-            echo "<div class=\"row\">";
+            echo "<div class=\"row\" style=\"margin-left: 25px\">";
             for($i = 0; $i < sizeof(self::$details); $i+=5){
                 echo "
                 <!--galery START-->
-                    <div class=\"col-sm-4 py-2\">
+                    <div class=\"px-4 py-4\">
                         <div class=\"card h-100 picture-gallery\" style=\"width: 18rem;\">
                             <a href=\"".self::$details[$i+4]."\" target=\"_blank\">
                                 <img src=\"".self::$details[$i+1]."\" class=\"card-img-top\" alt=\"".self::$details[$i]."\">
                             </a>
-                            <div style=\"width: 96%;\">
-                                <h5 class=\"card-header text-center bg-light\">".self::$details[$i]."</h5>
-                                <p class=\"card-text text-center bg-light\">Posted on ".date( "d M  Y", strtotime(self::$details[$i+3]))."</p>
+                            <div class=\"picture-info\" style=\"width: 96%;\">
+                                <p class=\"card-header text-center bg-light\"><strong>".self::$details[$i]."</strong></p>
+                                <p class=\"card-subtitle mb-2 text-muted text-center bg-light\">Posted on ".date( "d M  Y", strtotime(self::$details[$i+3]))."</p>
                             </div>
                         </div>
                     </div>
