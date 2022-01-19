@@ -32,6 +32,10 @@ if (isset($_GET['RenderPage'])) {
         case 'unfinisedproject':
             $curentLocation = "Unfinised Project";
             break;
+        
+        default:
+            $curentLocation = "Secret";
+            break;
     }
 }
 ?>
@@ -47,6 +51,7 @@ if (isset($_GET['RenderPage'])) {
     <link rel="stylesheet" href="styles/genericStyles.css">
     <link rel="stylesheet" href="styles/dark-mode.css">
     <script src="https://kit.fontawesome.com/629067d246.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
     <title>sanjustin.xyz</title>
 </head>
 

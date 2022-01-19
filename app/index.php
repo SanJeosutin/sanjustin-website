@@ -7,9 +7,7 @@ include("classes/components/renderContent.php");
 if (isset($_GET['RenderPage'])) {
     switch($_GET['RenderPage']){
         case 'game':
-            include_once("../config/easterEgg/simplePlatformer/");
-
-            Content::render("GAME", array("secret", "Welp, you got me. I'm not sure what this is, but I'm sure it's not a secret anymore."));
+            Content::render("GAME", array("secret", "Welp, you got me. I'm not sure what this is, but I'm sure it's not a secret anymore. <div id=parent></div><script type=\"module\" src=\"../config/easterEgg/simplePlatformer/src/main.js\"></script>"));
             break;
     }
 }else{
