@@ -9,14 +9,14 @@ if (isset($_GET['RenderPage'])) {
 
     switch ($_GET['RenderPage']) {
             case 'pastproject':
-                Content::render("PROJECTS", array("pastproject", "In here you can find some photos I took, ranging from new ones to old ones. Enjoy!"));
+                Content::render("PROJECTS", array("pastproject", "Some of my past projects, wether it be a uni assignments or my own projects."));
                 break;
 
             case 'currentproject':
-                Content::render("PROJECTS", array("currentproject", "In here you can find some cool stuff I did, ranging from new ones to old ones. Enjoy!"));
+                Content::render("PROJECTS", array("currentproject", "My current project that, well... I'm currently working on."));
                 break;
             case 'unfinishedproject':
-                Content::render("PROJECTS", array("unfinishedproject", "In here you can find some designs I've done, ranging from new ones to old ones. Enjoy!"));
+                Content::render("PROJECTS", array("unfinishedproject", "Old / unfinished projects that I've lost intrest in. (<em>There will be more of these in the coming future</em>😭)"));
                 break;
 
             default:
