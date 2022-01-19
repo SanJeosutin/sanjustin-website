@@ -49,3 +49,13 @@ h1{
     filter: blur(12px);
     transition: 0.25s ease;
 }
+
+.container{
+    display:flex;
+    flex-direction:column;
+    min-height:90vh;
+}
+
+.content-wrap{
+    flex: 1;
+}
