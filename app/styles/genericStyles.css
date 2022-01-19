@@ -27,12 +27,20 @@ h1{
     height: 100vh;
 }
 
-.picture-gallery div{
-    opacity: 0;
-    transition: 0.25s ease;
+.picture-gallery img, .picture-gallery{
+    border-radius: 15px;
+    border-width: 2px;
 }
 
-.picture-gallery:hover div{
+.picture-gallery .picture-info{
+
+    opacity: 0;
+    transition: 0.25s ease;
+    position: absolute;
+    margin: 5px 5px;
+}
+
+.picture-gallery:hover .picture-info{
     opacity: 1;
 }
 
@@ -40,10 +48,4 @@ h1{
     opacity: 1;
     filter: blur(12px);
     transition: 0.25s ease;
-}
-
-.picture-gallery div{
-    opacity: 0;
-    position: absolute;
-    margin: 5px 5px;
 }
