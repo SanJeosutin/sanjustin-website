@@ -17,7 +17,7 @@
                     <a class="dropdown-item" href="project.php?RenderPage=unfinishedproject">Unfinished Projects</a>
                 </div>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="ambition.php">Ambitions</a>
             </li>
             <li class="nav-item dropdown">
