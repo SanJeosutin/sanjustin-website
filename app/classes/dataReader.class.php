@@ -77,12 +77,12 @@ class DataReader{
 
         $table .= "</tr></thead>";
         $table .= "<tbody>";
-        
 
-        foreach($mainContent as $content){
+        for ($i=0; $i < count($mainContent);) { 
             $table .= "<tr>";
-            for ($i=0; $i < count($headContent); $i++) { 
+            for ($j=0; $j < count($headContent); $j++) { 
                 $table .= "<td>$mainContent[$i]</td>";
+                $i++;
             }
             $table .= "</tr>";
         }
