@@ -2,7 +2,7 @@
 2022 Resolutions
 
 #DESCRIPTION
-My goal for 2022 is to do the following.
+My ambition this year is to do the following.
 
 #LIST
 GOAL | COMPLETE? | DATE OF COMPLETION;Learn React framework, ❌, Not yet completed;Learn Python3 for networking, ❌, Not yet completed;Complete e-commerce project, ❌, Not yet completed
