@@ -1,0 +1,131 @@
+<?php
+
+include("card.php");
+include("image.php");
+include("classes/dataReader.class.php");
+include("classes/githubAPI.class.php");
+include("classes/spotifyAPI.class.php");
+include("classes/instagramAPI.class.php");
+
+
+/*
+ * Arguments    : Description           | Example
+ * -----------------------------------------------
+ * 1st arg      : type data to render   | "PROJECTS" or "GALLERIES"
+ * 2nd arg      : array 
+ */
+class Content{
+    static function render(){
+        extract(func_get_args(), EXTR_PREFIX_ALL, "arg");
+
+        if(isset($arg_1)){
+            $contentType = $arg_1[0];
+            $description = $arg_1[1];
+
+            echo "
+            <!--Main Content START-->
+            <div>
+            <p class=\"lead\">
+            $description
+            </p>
+            <br>
+            </div>
+            <!--Main Content END-->
+            ";
+        }
+
+        $dr = new DataReader();
+
+        switch ($arg_0) {
+            case 'HOME':
+                $git = new Github();
+                $spotify = new Spotify();
+                $res = $git->getUserInfo();
+                $topSong = $spotify->getTopTenSongs();
+
+                echo "
+                <!--Main Content START-->
+                    <div class=\"row\">
+                        <div class=\"col-md-4\">
+                            <img src=\"$res->avatar_url\" class=\"img-thumbnail rounded mx-auto d-block\" alt=\"$res->login\">
+                        </div>
+                        <div class=\"col-md-8\">
+                        ";
+                            echo $dr->readRawData("../data/Bio.txt")
+                        ."
+                        </div>
+                    </div>
+                <!--Main Content END-->
+                ";
+                //var_dump($topSong);
+                for($i=0; $i < count($topSong->items); $i++){
+                    $song = $topSong->items[$i];
+                    $songName = $song->name;
+                    $songArtist = $song->artists[0]->name;
+                    $songAlbum = $song->album->name;
+                    $songImage = $song->album->images[0]->url;
+                    $songURL = $song->external_urls->spotify;
+                    $songID = $song->id;
+
+                    echo"
+                    <div class=\"card\">
+                        <div class=\"card-body\">
+                            <div class=\"row\">
+                                <div class=\"col-xs-1\">
+                                    <h4>".$i.".</h4>
+                                </div>
+                                <div class=\"col-sm-1\">
+                                    <img src=\"$songImage\" class=\"img-thumbnail rounded mx-auto d-block\" alt=\"$songName\">
+                                </div>
+                                <div class=\"col\">
+                                    <div class=\"card-block px-2\">
+                                        <h5 class=\"card-title\"> <a href=\"$songURL\">$songName</a></h5>
+                                        <p class=\"card-text\"> <a href=\"ARTIST LINK\">$songArtist </a> | <a href=\"ALBUM LINK\"><em>$songAlbum</em></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    ";
+                }
+
+                break;
+
+            case 'PROJECTS':
+                $git = new Github();
+                $result = $git->getUserRepo();
+                
+                foreach($result as $res){
+                    if(strpos($res->description, "{$contentType}")){
+                        $res->description = str_replace('{'.$contentType.'}', "", $res->description);
+                        Card::create($res->name, $res->description, $res->html_url, $res->html_url);
+                    }
+                }
+
+                Card::display();
+                break;
+            
+            case "AMBITIONS":
+                echo $dr->readRawData("../data/2022 Goal.txt");
+                break;
+
+            case 'GALLERIES':
+                $ig = new Instagram();
+                $result = $ig->getUserPost();
+                
+                foreach($result as $res){
+                    $caption = substr($res->caption, 0, strpos($res->caption, "#"));
+                    $type = substr($res->caption, strpos($res->caption, '#') + 1);
+                    if($type == $contentType){
+                        Image::create($caption, $res->media_url, $type, $res->timestamp, $res->permalink);
+                    }
+                }
+                
+                Image::display();
+                break;
+        }
+
+    }
+}
+
+?>
