@@ -62,7 +62,7 @@ class Content{
                 foreach($result as $res){
                     if(strpos($res->description, "{$contentType}")){
                         $res->description = str_replace('{'.$contentType.'}', "", $res->description);
-                        Card::create($res->name, $res->description, $res->html_url, $res->html_url);
+                        Card::create($res->name, $res->description, $res->homepage, $res->html_url);
                     }
                 }
 
