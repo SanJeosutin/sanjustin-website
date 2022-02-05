@@ -5,4 +5,4 @@
 My ambition this year is to do the following.
 
 #LIST
-GOAL | COMPLETE? | DATE OF COMPLETION;Learn React framework, ❌, Not yet completed;Learn Python3 for networking, ❌, Not yet completed;Complete e-commerce project, ❌, Not yet completed; Develop a simple game using Phaser3, ❌, Not yet completed 
+GOAL | COMPLETE? | DATE OF COMPLETION;Learn React framework, ❌, Not yet completed;Learn Python3 for networking, ❌, Not yet completed;Complete e-commerce project, ❌, Not yet completed; Develop a simple game using Phaser3, ❌, Not yet completed;Learn to develop Discord bot using Discord.js , ❌, Not yet completed
