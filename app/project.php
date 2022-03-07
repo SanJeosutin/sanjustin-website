@@ -9,7 +9,7 @@ if (isset($_GET['RenderPage'])) {
 
     switch ($_GET['RenderPage']) {
             case 'pastproject':
-                Content::render("PROJECTS", array("pastproject", "Some of my past projects, wether it be a uni assignments or my own projects."));
+                Content::render("PROJECTS", array("pastproject", "Some of my past projects, whether it be a uni assignments or my own projects."));
                 break;
 
             case 'currentproject':
